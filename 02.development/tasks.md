@@ -4,7 +4,7 @@
 
 ## タスク一覧
 
-### 1a. ローカル環境構築＋Supabase接続確認
+### 1a. ローカル環境構築＋Supabase接続確認✅
 - 完了条件（/goal用）：
   > `feature/setup-nextjs-supabase`ブランチを作成し、Next.js＋shadcn/uiの雛形を作成する。Supabaseに`ingredients`テーブル（name, type列）と`history`テーブル（date, menu_name列）を作成し、`02.development/.env.local`にSupabaseの接続情報を設定した上で、アプリから1件データを書き込み→読み込みできることを実装する。`npm run dev`で起動し、ブラウザまたはAPIルート経由でSupabaseへの読み書きが成功することを確認できたらPRを作成して終了する。最大15ターンで完了しない場合は、途中経過を報告して停止する。
 
