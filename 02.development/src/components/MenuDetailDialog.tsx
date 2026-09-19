@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import { CheckIcon, ShoppingBasketIcon, UsersIcon, XIcon } from 'lucide-react';
 import { Menu } from '../types/menu';
 
