@@ -78,6 +78,30 @@
   --ring: oklch(0.556 0 0);
 }
 
+@theme {
+  --color-cream-50: #FFFDF8;
+  --color-cream-100: #FDF7EC;
+  --color-cream-200: #F3E9D7;
+  --color-ink-500: #8C7C6C;
+  --color-ink-700: #5C4F43;
+  --color-ink-900: #3D3229;
+  --color-carrot-50: #FFF4E9;
+  --color-carrot-100: #FFE7D1;
+  --color-carrot-300: #F7B278;
+  --color-carrot-500: #E8803A;
+  --color-carrot-600: #D46C27;
+  --color-leaf-50: #EFF7EE;
+  --color-leaf-100: #DDEEDA;
+  --color-leaf-300: #93C58C;
+  --color-leaf-500: #4E9349;
+  --color-leaf-600: #3F7C3B;
+  --color-mocha-50: #F7F3EE;
+  --color-mocha-100: #EBE2D6;
+  --color-mocha-300: #C8B39B;
+  --color-mocha-500: #8A6F53;
+  --color-mocha-600: #715A42;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
