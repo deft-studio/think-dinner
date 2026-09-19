@@ -19,7 +19,7 @@
 - 完了条件（/goal用）：
   > `feature/ingredient-list`ブランチを作成し、Figmaのホーム画面デザイン（`01.planning/design-spec.md`の画面設計セクション参照）に沿って、食材を追加・個別削除できる「ある食材」リストと、同様に追加・削除できる「苦手な食材」リストを実装する。データはSupabaseの`ingredients`テーブルに保存し、ページを再読み込みしても保持されるようにする。ブラウザで食材を追加・削除し、リロード後も内容が保持されていることを確認できたらPRを作成して終了する。最大20ターンで完了しない場合は、途中経過を報告して停止する。
 
-### 3a. OpenRouter疎通確認✅
+### 3a. OpenRouter疎通確認✅[#4](https://github.com/deft-studio/think-dinner/pull/4)
 
 - 完了条件（/goal用）：
   > `feature/openrouter-spike`ブランチを作成し、OpenRouterのAPIキーを設定し、固定の簡単なプロンプトをAPI Routes経由でOpenRouterに送り、レスポンスを画面かコンソールに表示する最小限の実装をする。実際にOpenRouterからレスポンスが返ってくることを確認できたらPRを作成して終了する。最大10ターンで完了しない場合は、途中経過を報告して停止する。
