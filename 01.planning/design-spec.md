@@ -38,7 +38,7 @@ product: think-dinner
 
 ## 技術選定（任意・推奨）
 
-- **フロントエンド**：Next.js + shadcn/ui。既存商品と同じ構成にして、慣れている部分は流用しつつ、今回新しい部分（AI連携・DB）に集中する。画面デザインの参考にVercelのv0を使う予定で、v0の生成コードがshadcn/ui前提のためそのまま採用した。
+- **フロントエンド**：Next.js + shadcn/ui。既存商品と同じ構成にして、慣れている部分は流用しつつ、今回新しい部分（AI連携・DB）に集中する。画面デザインはVercelのv0・Magic Patterns等で作成し、生成されたコードを骨組みとして使いながら、自分の意図に合わせて直していく方針。v0の生成コードがshadcn/ui前提のため、shadcn/uiをそのまま採用した。
 - **バックエンド**：Next.js API Routes。フロントと同一リポジトリで完結できるため。
 - **DB**：Supabase（Postgres）。デプロイ先をVercelにするのに伴い、Vercel Postgres/KVが提供終了しているため、Marketplace経由で連携できる代替として選んだ。個人開発での実績も十分にある。ORM（Prisma・Drizzle等）は導入せず、Supabaseのクライアントを直接使う。テーブルが2つ・列も少ない単純なスキーマのため、ORMを挟む必要性が薄いと判断した。
 - **AI/LLM**：OpenRouter。「AIモデルを切り替えて試したい」という学習目的をそのまま実現するために採用。似た位置づけのVercel AI Gatewayも検討したが、今回はOpenRouter自体を試したいのでこちらにした。
