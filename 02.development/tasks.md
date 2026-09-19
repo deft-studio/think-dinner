@@ -9,12 +9,12 @@
 - 完了条件（/goal用）：
   > `feature/setup-nextjs-supabase`ブランチを作成し、Next.js＋shadcn/uiの雛形を作成する。Supabaseに`ingredients`テーブル（name, type列）と`history`テーブル（date, menu_name列）を作成し、`02.development/.env.local`にSupabaseの接続情報を設定した上で、アプリから1件データを書き込み→読み込みできることを実装する。`npm run dev`で起動し、ブラウザまたはAPIルート経由でSupabaseへの読み書きが成功することを確認できたらPRを作成して終了する。最大15ターンで完了しない場合は、途中経過を報告して停止する。
 
-### 1b. Vercelへの初回デプロイ確認✅
+### 1b. Vercelへの初回デプロイ確認✅[#2](https://github.com/deft-studio/think-dinner/pull/2)
 
 - 完了条件（/goal用）：
   > `feature/setup-vercel-deploy`ブランチを作成し、Vercelプロジェクトを作成してthink-dinnerのリポジトリと連携する。Supabase等の環境変数をVercel側にも設定し、mainブランチの内容をデプロイする。発行された公開URLにアクセスして、ローカルと同じ画面が表示されることを確認できたらPRを作成して終了する。最大10ターンで完了しない場合は、途中経過を報告して停止する。
 
-### 2. 冷蔵庫リスト管理・NG食材登録の実装
+### 2. 冷蔵庫リスト管理・NG食材登録の実装✅[#3](https://github.com/deft-studio/think-dinner/pull/3)
 
 - 完了条件（/goal用）：
   > `feature/ingredient-list`ブランチを作成し、Figmaのホーム画面デザイン（`01.planning/design-spec.md`の画面設計セクション参照）に沿って、食材を追加・個別削除できる「ある食材」リストと、同様に追加・削除できる「苦手な食材」リストを実装する。データはSupabaseの`ingredients`テーブルに保存し、ページを再読み込みしても保持されるようにする。ブラウザで食材を追加・削除し、リロード後も内容が保持されていることを確認できたらPRを作成して終了する。最大20ターンで完了しない場合は、途中経過を報告して停止する。
@@ -39,7 +39,6 @@
 - 完了条件（/goal用）：
   > `feature/ci-setup`ブランチを作成し、`.github/workflows/ci.yml`を作成して、lint・build・テストをプッシュ時に自動実行するようにする。GitHub Actions上でワークフローが実際に成功することを確認できたらPRを作成して終了する。最大15ターンで完了しない場合は、途中経過を報告して停止する。
 
-### 6. CD設定
+### 6. CD設定（不要）
 
-- 完了条件（/goal用）：
-  > `feature/cd-setup`ブランチを作成し、`.github/workflows/cd.yml`を作成して、mainブランチへのマージ時にVercelへ自動デプロイされるようにする。デプロイ後、公開URLで実際にアプリが動作することを確認できたらPRを作成して終了する。最大15ターンで完了しない場合は、途中経過を報告して停止する。
+task 1bでVercelとGitHubリポジトリを連携した時点で、Vercel純正のGit連携によりmainブランチへのプッシュで自動デプロイされる状態になっているため、GitHub Actionsでの追加のCD設定は不要と判明した。
