@@ -39,6 +39,5 @@ VercelのGit連携で、mainへのマージで自動で公開されるため、G
 
 ## 確かめること・後でやること
 
-- mainの保護（ルールセット`protect-main`）に、指定していない`require_extra_approval_for_unattributed_changes: true`が入っている（承認の人数は0）。PRのマージで止められないかを確かめ、止められたら設定を見直す
 - 結果タブのカードが細い（ページ幅`max-w-xl`、Figmaは832px）
 - READMEの「デモ・スクリーンショット」「開発について」「苦労した点」は、実装が進んでから書く
