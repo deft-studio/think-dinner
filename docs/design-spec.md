@@ -43,7 +43,7 @@ product: think-dinner
 - **DB**：Supabase（Postgres）。デプロイ先をVercelにするのに伴い、Vercel Postgres/KVが提供終了しているため、Marketplace経由で連携できる代替として選んだ。個人開発での実績も十分にある。ORM（Prisma・Drizzle等）は導入せず、Supabaseのクライアントを直接使う。テーブルが2つ・列も少ない単純なスキーマのため、ORMを挟む必要性が薄いと判断した。
 - **AI/LLM**：OpenRouter。「AIモデルを切り替えて試したい」という学習目的をそのまま実現するために採用。似た位置づけのVercel AI Gatewayも検討したが、今回はOpenRouter自体を試したいのでこちらにした。
 - **インフラ・デプロイ先**：Vercel。既存2商品はCloudflareだったが、今回はNext.jsの開発元が提供するVercelに変えて、Cloudflare×Next.js（OpenNextアダプタ経由）で過去に起きたような相性問題を避けつつ、新しい環境を学ぶ。
-- **CI/CD**：GitHub Actions。既存2商品と同じ。
+- **CI**：GitHub Actions（`docs/tasks.md`のタスク5）。**CD**：VercelのGit連携で、mainへのマージで自動で公開する（GitHub ActionsでのCDは作らない）。
 
 ## アーキテクチャ（任意・推奨）
 
@@ -81,7 +81,7 @@ sequenceDiagram
 
 ## 画面設計（任意）
 
-[Figma（think-dinner）](https://www.figma.com/design/CHdHRTzAMdQaZXhjhhlHIw/think-dinner?node-id=0-1&p=f&t=0ZVJlPRclIaztsPU-0)
+[Figma（think-dinner）](https://www.figma.com/design/CHdHRTzAMdQaZXhjhhlHIw/think-dinner?node-id=28-2)（`node 28:2`の配下が正。`3:612`は初期の比較用の画像）
 
 ## データ構造（任意・推奨）
 
