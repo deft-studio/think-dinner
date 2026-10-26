@@ -1,0 +1,26 @@
+# 依存パッケージ
+/node_modules
+
+# テスト
+/coverage
+
+# ビルドの出力（Next.js）
+/.next/
+/out/
+/build
+
+# 秘密の値（ひな形の .env*.example だけはGitに入れる）
+.env*
+!.env*.example
+.dev.vars*
+*.pem
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# その他
+.DS_Store
+Thumbs.db
+npm-debug.log*

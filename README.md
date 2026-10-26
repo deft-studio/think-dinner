@@ -2,8 +2,8 @@
 
 冷蔵庫にある食材を入力すると、AIが献立を提案するWebツール。今ある食材だけでなく「これを買い足せばこのメニューも作れます」という提案も出す。
 
-- 企画の背景：[01.planning/planning.md](01.planning/planning.md)
-- 設計ドキュメント：[01.planning/design-spec.md](01.planning/design-spec.md)
+- 企画の背景：[docs/planning.md](docs/planning.md)
+- 設計ドキュメント：[docs/design-spec.md](docs/design-spec.md)
 
 ## 特徴（推奨）
 
@@ -15,7 +15,7 @@
 
 ## デモ・スクリーンショット（任意・推奨）
 
-{実際に動いている画面のスクリーンショットやGIF、公開URLがあれば貼る。文章より一枚の画像の方が「本当に動くもの」だと伝わる。}
+{実際に動いている画面のスクリーンショットやGIFを貼る。文章より一枚の画像の方が「本当に動くもの」だと伝わる。}
 
 ## 技術スタック（必須）
 
@@ -25,26 +25,21 @@
 | バックエンド            | Next.js API Routes |
 | DB                      | Supabase |
 | AI/LLM（使っていれば）  | OpenRouter |
-| インフラ・デプロイ先    | Vercel |
-| CI/CD・テスト（あれば） | GitHub Actions |
-| その他（あれば）        | ー |
+| インフラ・デプロイ先    | Vercel（mainへのマージで自動公開） |
+| CI/CD・テスト（あれば） | GitHub Actions（未設定。`docs/tasks.md`のタスク5） |
+| 運用                    | Dependabot、GitHubの秘密の値のスキャン |
 
-## 構成（3ステージ以上ある商品のみ・任意）
+## 構成
 
-- `01.planning/` — 企画/設計
-- `02.development/` — 開発
-- `03.evaluation/` — テスト
-- `05.ops/` — 運用
-
-## 動作確認方法 / 開発（必須）
-
-{どう動かして確認するか。ビルド・デプロイ等の細かいコマンドは`02.development/package.json`の`scripts`参照でよい（二重に書かない）。}
-
-`02.development/gotchas.md`があればリンクする（例：`実装のハマりどころは[02.development/gotchas.md](02.development/gotchas.md)を参照。`）。無ければ書かない。
+- 直下 — アプリ本体のコード（Next.js）
+- `docs/` — 企画書・設計書・タスク・稼働状況
+- `.github/` — Dependabotの設定・PRのテンプレート
 
 ## 開発について（推奨）
 
 {開発でAIツール（Claude Code等）をどう使ったかを正直に書く。採用担当・派遣先ITマネージャーは開発プロセスの実態を評価対象にしており、AI利用を隠す方がマイナスになる。「丸投げした／しなかった」を強調するのではなく、実際にどう分担したかを事実ベースで書く。}
+
+開発の決まり（AIエージェント向け）は[AGENTS.md](AGENTS.md)。
 
 ## 苦労した点（任意）
 

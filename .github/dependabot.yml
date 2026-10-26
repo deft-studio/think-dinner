@@ -1,0 +1,15 @@
+# 依存パッケージの更新を、毎週PRにする。
+# 小さい更新（minor・patch）は1つのPRにまとめ、大きい更新（major）は1つずつ出る。
+# 脆弱性の修正のPR（Dependabot security updates）は、GitHubのリポジトリの設定で有効にしている。
+# GitHub Actionsの更新（package-ecosystem: "github-actions"）は、CIを作る時（tasks.mdのタスク5）に足す。
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
