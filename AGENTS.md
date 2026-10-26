@@ -44,7 +44,7 @@
 | タスクが終わった | `docs/tasks.md`の見出しを1行＋PRのリンクに縮める（完了条件の全文はPRの本文に残す） |
 | やることが増えた | `docs/tasks.md`（Issueは受付の箱。やると決めたらtasksへ移してIssueを閉じる） |
 | 実装でハマった | `docs/gotchas.md`（無ければ作る） |
-| 公開の状態が変わった（公開・停止）、異常が起きた | `docs/status.md` |
+| 公開の状態が変わった（公開・停止）、異常が起きた | `docs/status.md`（影響が大きい事故は、直した後に`docs/postmortems/`へ振り返りを書く。手順は`_infra/runbooks/`） |
 | 特徴・技術・公開URL・見た目が変わった | `README.md` |
 | コマンドが変わった | このファイルの「コマンド」 |
 
