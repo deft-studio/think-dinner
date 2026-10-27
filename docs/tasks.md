@@ -20,8 +20,7 @@
 - 完了条件（/goal用）：
   > `feature/ci-setup`ブランチを作成し、deft-studioの`_infra/templates/ci-template.yml`から`.github/workflows/ci.yml`を作って、PRとmainへのpushの時に、資料のリンク切れ・依存パッケージの脆弱性・lint・ビルドを自動で確かめるようにする（公開リポジトリなので、秘密の値のスキャンのjobは消す。テストの仕組みが入ったら、テストも足す）。チェックの中身を選んだ理由は、`ci.yml`のコメントに書く。`.github/dependabot.yml`に`github-actions`の更新を足す。GitHub Actions上でワークフローが実際に成功することを確認する。PRを作ったら、PRに付くClaudeのレビューの指摘のうち、正しさと要件に関わるものを直す。`AGENTS.md`の「いつ何を直すか」に沿って資料を直す。PRの本文には、この完了条件の全文と、直した資料を書く。確認できたらPRを作成し、マージ後にmainの保護でCIの成功を必須にする設定を、けいとさんに確認してから入れると報告して終了する。最大15ターンで完了しない場合は、途中経過を報告して停止する。けいとさんの操作や許可が必要で進めなくなった場合は、必要な操作を報告して停止する。
 
-### 6. CD設定（不要）
-VercelのGit連携で、mainへのマージで自動で公開されるため、GitHub ActionsでのCDは作らない（task 1bで判明）。
+### 6. CD設定（作らない。理由は`docs/design-spec.md`の技術選定）✅[#2](https://github.com/deft-studio/think-dinner/pull/2)
 
 ### 7. AIの窓口（`/api/suggest`）の守り
 
