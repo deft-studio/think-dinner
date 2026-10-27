@@ -22,13 +22,13 @@
 | AI/LLM               | OpenRouter |
 | インフラ・デプロイ先 | Vercel（mainへのマージで自動公開） |
 | CI/CD・テスト        | GitHub Actions（未設定。`docs/tasks.md`のタスク5） |
-| 運用                 | Dependabot、GitHubの秘密の値のスキャン |
+| 運用                 | Dependabot、GitHubの秘密の値のスキャン、PRのレビューはClaude（claude-code-action） |
 
 ## 構成
 
 - 直下 — アプリ本体のコード（Next.js）
 - `docs/` — 企画書・設計書・タスク・稼働状況
-- `.github/` — Dependabotの設定・PRのテンプレート
+- `.github/` — Dependabot・PRのレビューの設定、PRのテンプレート
 
 ## 開発について
 
